@@ -14,8 +14,13 @@ phases:
 
   build:
     commands:
-      - dotnet restore
+      - echo "Publishing the project ..."
       - dotnet publish -c Release -o output/
+      
+  artifacts:
+    files:
+      - output/**/*
+    name: MyAppBuildOutput
 
   post_build:
     commands:
@@ -27,7 +32,4 @@ phases:
       - cd ..
       - echo "Build completed."
 
-artifacts:
-  files:
-    - deployment-package.zip
-  name: MyAppBuildOutput
+
