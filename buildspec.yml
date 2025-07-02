@@ -16,7 +16,11 @@ phases:
     commands:
       - echo "Building the project ..."
       - dotnet build --configuration Release --no-restore
-
+  artifacts:
+    files: 
+      - output/**/*
+      name: MyAppBuildOutput
+      
   post_build:
     commands:
       - echo "Build completed."
