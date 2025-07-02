@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Instalando .NET 9 desde canal 9.0..."
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 9.0
-      - export PATH="$PATH:$HOME/.dotnet"
+      - export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
       - dotnet --version
       - echo "Restaurando dependencias..."
       - dotnet restore
