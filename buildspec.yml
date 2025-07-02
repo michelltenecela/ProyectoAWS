@@ -3,17 +3,17 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Instalando .NET 9 SDK..."
-      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 9.0.100-preview.4
+      - echo "Instalando .NET 9 desde canal 9.0..."
+      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 9.0
       - export PATH="$PATH:$HOME/.dotnet"
       - dotnet --version
       - echo "Restaurando dependencias..."
       - dotnet restore
   build:
     commands:
-      - echo "Compilando..."
+      - echo "Compilando la aplicación..."
       - dotnet publish -c Release -o published_app
 
 artifacts:
   files:
-    - published_app/**/*  
+    - published_app/**/*
