@@ -14,8 +14,8 @@ phases:
 
   build:
     commands:
-      - echo "Building the project ..."
-      - dotnet build --configuration Release --no-restore
+      - dotnet restore
+      - dotnet publish -c Release -o output/
 
   post_build:
     commands:
