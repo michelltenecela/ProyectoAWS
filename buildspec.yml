@@ -2,18 +2,21 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      dotnet: 6.0
     commands:
-      - echo "Instalando .NET 9 desde canal 9.0..."
-      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 9.0
-      - export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
-      - dotnet --version
-      - echo "Restaurando dependencias..."
+      - echo "Installing dependencies ..."
+
+  pre_build:
+    commands:
+      - echo "Restoring dependencies ..."
       - dotnet restore
+
   build:
     commands:
-      - echo "Compilando la aplicación..."
-      - dotnet publish -c Release -o published_app
+      - echo "Building the project ..."
+      - dotnet build --configuration Release --no-restore
 
-artifacts:
-  files:
-    - published_app/**/*
+  post_build:
+    commands:
+      - echo "Build completed."
