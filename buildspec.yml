@@ -3,33 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      dotnet: 9.0
-    commands:
-      - echo "Installing dependencies ..."
-
-  pre_build:
-    commands:
-      - echo "Restoring dependencies ..."
-      - dotnet restore
-
+      dotnet: 6.0
   build:
     commands:
-      - echo "Publishing the project ..."
-      - dotnet publish -c Release -o output/
-      
-  artifacts:
-    files:
-      - output/**/*
-    name: MyAppBuildOutput
+      - dotnet publish -c Release -o publish
 
-  post_build:
-    commands:
-      - echo "Publishing the application ..."
-      - dotnet publish --configuration Release --output ./publish --no-build
-      - echo "Creating deployment package ..."
-      - cd publish
-      - zip -r ../deployment-package.zip .
-      - cd ..
-      - echo "Build completed."
-
-
+artifacts:
+  files:
+    - '**/*'
+  base-directory: publish
