@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zAzvame/dEw=",
+  "dgSpecHash": "86DHNmJjX64lVj9WUWnKCl3FQ/6mhQDef4dpZ15L9Cn6Ru0HGa8aueSOR2nVOfXbbPw0fUKGkCmI6rQvHsnLmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\Proyecto\\Proyecto.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
