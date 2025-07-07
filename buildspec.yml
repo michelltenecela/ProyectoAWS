@@ -1,8 +1,17 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - wget https://dotnet.microsoft.com/en-us/download/dotnet/scripts/v1/dotnet-install.sh
+      - chmod +x dotnet-install.sh
+      - ./dotnet-install.sh --version 9.0.0-preview.6
+      - export DOTNET_ROOT=$HOME/.dotnet
+      - export PATH=$PATH:$HOME/.dotnet
+
   build:
     commands:
+      - dotnet --version
       - dotnet publish -c Release -o publish
 
 artifacts:
